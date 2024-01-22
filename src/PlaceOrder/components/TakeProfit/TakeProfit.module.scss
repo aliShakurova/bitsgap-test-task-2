@@ -1,0 +1,173 @@
+$background-color: #2b273b;
+$light-gray: #a2a7b9;
+$mediun-light-gray: #818c99;
+$dark-gray: #333545;
+$darkest-gray: #2b273b;
+$white: #ffffff;
+$error: #f96c5a;
+
+.root {
+  background-color: $background-color;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 12px;
+  font-weight: 500;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .label {
+      display: flex;
+      color: $white;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      flex-direction: row;
+
+      .name {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .profitBlock {
+    display: flex;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 21px;
+    padding: 0 2px;
+
+    .name,
+    .sum {
+      white-space: nowrap;
+    }
+
+    .separator {
+      border-bottom: 1px dashed $mediun-light-gray;
+      opacity: 0.2;
+      width: 100%;
+      margin: 0 8px;
+    }
+
+    .amount {
+      color: $white;
+    }
+  }
+
+  .amountToBuySell {
+    float: right;
+    padding-right: 0;
+  }
+
+  .closeIconWrapper {
+    float: right;
+
+    button {
+      padding: 0;
+    }
+  }
+
+  .unitPrecentProfit,
+  .unitPrecentAmount,
+  .unitUSDT {
+    color: $light-gray;
+  }
+
+  .amountToSellBuy {
+    margin-left: 9px;
+  }
+
+  .targetPrice {
+    color: $white;
+  }
+
+  .buttonContainer {
+    margin-top: 8px;
+    font-size: 12px;
+    margin-left: 7px;
+
+    button span {
+      margin-right: 15px;
+    }
+  }
+
+  .inputWrapper {
+    display: flex;
+    padding-right: 6px;
+
+    .input {
+      margin-left: 0;
+    }
+  }
+
+  .input {
+    background-color: $background-color;
+    border: none;
+    max-width: 29px;
+    color: $white;
+    margin-left: 17px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .input:focus {
+    border: none;
+    outline: none;
+    background-color: $darkest-gray;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    thead tr td {
+      padding-top: 8px;
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $mediun-light-gray;
+        td {
+          padding: 9px 0;
+        }
+
+        &.profitError {
+          border-bottom-color: $error;
+
+          td {
+            input,
+            .unitPrecentProfit,
+            .unitPrecentAmount,
+            .targetPrice,
+            .unitUSDT {
+              color: $error;
+            }
+          }
+        }
+
+        &:first-child td {
+          padding-top: 4px;
+        }
+      }
+    }
+  }
+
+  .error {
+    width: 100%;
+    background-color: $darkest-gray;
+    border: 1px solid $dark-gray;
+    color: $error;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 5px 0;
+  }
+}
